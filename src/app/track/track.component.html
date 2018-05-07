@@ -1,0 +1,132 @@
+<section class="tc_section section_padding reveal animated" data-delay="0.2s" data-anim="fadeInUpShort">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="tc_title"><h4>Please Enter Your Product Code And You Will See Your Product</h4></div>
+                <div class="tc_form">
+                    <!-- <form [(ngForm)]="S" method="GET"> -->
+                        <div class="tc_input_wrapper">
+                            <input type="text" [(ngModel)]="job_no" id="job_no" placeholder="Enter Your Tracking Code">
+                            <!-- <input name="code" type="text" placeholder="Enter Your Tracking Code"> -->
+                            <!-- <span class="fa fa-truck"></span>
+                            <button class="tc_btn" type="submit">enter</button> -->
+                        </div>
+                    <!-- </form> -->
+                </div>
+            </div>
+            <div class="col-lg-12">
+                    <data-table
+                    [title]="'Employees'"
+                    [items]="items"
+                    [itemCount]="itemCount"
+                    [pageLimits]="limits"
+                    (reload)="reloadItems($event)"
+                    (rowClick)="rowClick($event)"
+                    (rowDoubleClick)="rowDoubleClick($event)"
+                    [rowTooltip]="rowTooltip" >
+                    <data-table-column
+                        [property]="'cnee'"
+                        [header]="'cnee'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'line'"
+                        [header]="'line'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'origin'"
+                        [header]="'origin'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'job_no'"
+                        [header]="'job_no'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'type'"
+                        [header]="'type'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'contact_no'"
+                        [header]="'contact_no'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'pkgs'"
+                        [header]="'pkgs'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'weight'"
+                        [header]="'weight'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'vol'"
+                        [header]="'vol'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'hbl'"
+                        [header]="'hbl'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'etd'"
+                        [header]="'etd'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'nhs'"
+                        [header]="'nhs'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'shipper'"
+                        [header]="'shipper'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'mb_l'"
+                        [header]="'mb_l'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'agent'"
+                        [header]="'agent'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'igm'"
+                        [header]="'igm'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'zoho_freight'"
+                        [header]="'zoho_freight'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'zoho_line'"
+                        [header]="'zoho_line'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'ohbl'"
+                        [header]="'ohbl'"
+                        >
+                    </data-table-column>
+                    <data-table-column
+                        [property]="'payment'"
+                        [header]="'payment'"
+                        >
+                    </data-table-column>
+                    
+                </data-table>
+            </div>
+        </div>
+    </div>
+</section>

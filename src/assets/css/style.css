@@ -106,7 +106,7 @@ GENERAL (General section contains css those are similar among many pages).
 /* lato medium */
 	@font-face {
 		font-family: 'latoMedium';
-		src:url(fonts/Lato-Medium.ttf);
+		src:url(../fonts/Lato-Medium.ttf);
 	}
 
 /* montserrat medium */
@@ -479,7 +479,7 @@ GENERAL (General section contains css those are similar among many pages).
 
 /* BREADCRUMB STYLE */
 	.breadcrumb {
-	    background-image: url('images/bread_bg.jpg');
+	    background-image: url('../images/bread_bg.jpg');
 	    height: 300px;
 	    margin-bottom: 0;
 	    padding: 0;
@@ -796,11 +796,11 @@ GENERAL (General section contains css those are similar among many pages).
 		font-family: 'montserrat',sans-serif;
 		position: relative;
 	}
-	.mainmenu .navbar-nav > li:hover >a{
+	.mainmenu .navbar-nav > li >a:hover{
 		color: #006cb7;
 	}
-	.mainmenu .navbar-nav > li.active >a,
-	.mainmenu .navbar-nav > li.active >a:hover{
+	.mainmenu .navbar-nav > li >a.active,
+	.mainmenu .navbar-nav > li >a:hover{
 		background-color: transparent;
 		color: #006cb7;
 	}
