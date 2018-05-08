@@ -37,6 +37,9 @@ export class AppComponent {
           case '/track':
             this.breadcumText = 'Track & Trace';
             break
+          default:
+            this.breadcumText = 'Page Not Found';
+            break
         }
       }
     });
