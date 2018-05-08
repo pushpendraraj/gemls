@@ -10,6 +10,8 @@ import { HelpComponent } from './help/help.component';
 import { ContactComponent } from './contact/contact.component';
 import { TrackComponent } from './track/track.component';
 import { DataTableModule } from 'angular5-data-table';
+import { DataService } from './data.service';
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,9 +37,10 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes,{ useHash: true, enableTracing:false }),
     FormsModule,
-    DataTableModule.forRoot()
+    DataTableModule.forRoot(),
+    HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

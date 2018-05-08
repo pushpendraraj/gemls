@@ -13,8 +13,9 @@
             </div>
             <div *ngIf="items.length > 0" class="col-lg-12">
                     <data-table
-                    [title]="'Employees'"
+                    [title]="'Shipments'"
                     [items]="items"
+                    [limit]="limit"
                     [itemCount]="itemCount"
                     [pageLimits]="limits"
                     (reload)="reloadItems($event)"
