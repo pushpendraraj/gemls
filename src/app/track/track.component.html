@@ -2,19 +2,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <div class="tc_title"><h4>Please Enter Your Product Code And You Will See Your Product</h4></div>
+                <div class="tc_title"><h4>Please Enter Your Tracking Code And You Will See Your Product</h4></div>
                 <div class="tc_form">
-                    <!-- <form [(ngForm)]="S" method="GET"> -->
+                    <form  #searchForm="ngForm" id="searchForm" method="GET">
                         <div class="tc_input_wrapper">
-                            <input type="text" [(ngModel)]="job_no" id="job_no" placeholder="Enter Your Tracking Code">
-                            <!-- <input name="code" type="text" placeholder="Enter Your Tracking Code"> -->
-                            <!-- <span class="fa fa-truck"></span>
-                            <button class="tc_btn" type="submit">enter</button> -->
+                            <input type="text" (keyup)="applyFilter($event.target.value)" id="job_no" placeholder="Enter Your Tracking Code">
                         </div>
-                    <!-- </form> -->
+                    </form>
                 </div>
             </div>
-            <div class="col-lg-12">
+            <div *ngIf="items.length > 0" class="col-lg-12">
                     <data-table
                     [title]="'Employees'"
                     [items]="items"
@@ -23,6 +20,7 @@
                     (reload)="reloadItems($event)"
                     (rowClick)="rowClick($event)"
                     (rowDoubleClick)="rowDoubleClick($event)"
+                    [showReloading]="false"
                     [rowTooltip]="rowTooltip" >
                     <data-table-column
                         [property]="'cnee'"
@@ -123,10 +121,10 @@
                         [property]="'payment'"
                         [header]="'payment'"
                         >
-                    </data-table-column>
-                    
+                    </data-table-column> 
                 </data-table>
             </div>
+            <!-- <div *ngIf="items.length == 0" class="col-lg-5 col-md-offset-3"><div class="alert alert-danger text-center"><strong>Sorry ! </strong>No Record Found.</div></div> -->
         </div>
     </div>
 </section>

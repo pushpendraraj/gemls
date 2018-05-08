@@ -34,7 +34,7 @@ export class TrackComponent implements OnInit {
   cnee: 'Test',
   line: 'Test1',
   origin: 'Test1',
-  job_no: 'Test1',
+  job_no: 'Rajput',
   type: 'Test1',
   contact_no: 'Test1',
   pkgs: 'Test1',
@@ -349,7 +349,7 @@ export class TrackComponent implements OnInit {
   cnee: 'Test',
   line: 'Test1',
   origin: 'Test1',
-  job_no: 'Test1',
+  job_no: 'Rajput',
   type: 'Test1',
   contact_no: 'Test1',
   pkgs: 'Test1',
@@ -372,21 +372,11 @@ itemResource = new DataTableResource(this.listitems);
     items = [];
     itemCount = 0;
     limits = [10, 20, 40, 80];
-
+    
     constructor() {
-      this.rowColors = this.rowColors.bind(this);
       this.itemResource.count().then(count => this.itemCount = count);
     }
-
-    rowColors(item) {
-      console.log(item);
-        if (item.job_no == this.job_no) {
-          return true;
-        }else{
-          return false;
-        }
-    }
-    
+ 
     reloadItems(params) {
         this.itemResource.query(params).then(items => this.items = items);
     }
@@ -402,6 +392,22 @@ itemResource = new DataTableResource(this.listitems);
 
     rowTooltip(item) {
       return item.job_no;
+    }
+
+    applyFilter(filterValue: string) {
+      filterValue = filterValue.trim();
+      filterValue = filterValue.toLowerCase();
+      let newItem = [];
+      this.listitems.forEach(function(item, index){
+        if(item.job_no.toLowerCase() === filterValue){
+          newItem.push(item);
+        }
+      });
+      this.itemResource = new DataTableResource(newItem);
+      this.items = newItem;
+      this.itemCount = 0;
+      this.limits = [10, 20, 40, 80];
+      this.itemResource.count().then(count => this.itemCount = count);
     }
 
   ngOnInit() {
