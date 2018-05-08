@@ -16,7 +16,7 @@ export class AppComponent {
   ) {
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        if (router.url === '/') {
+        if (router.url === '/' || router.url === '/home') {
           this.isHome = true;
           this.slideCls = 'slider_area';
         } else {

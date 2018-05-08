@@ -1348,7 +1348,7 @@ GENERAL (General section contains css those are similar among many pages).
     START BLOG AREA
 -----------------------------*/
 	.blog_area{
-		background-image: url(images/blog_bg.jpg);
+		background-image: url(../images/blog_bg.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
@@ -1962,11 +1962,11 @@ GENERAL (General section contains css those are similar among many pages).
 }
 .mission_img{
 	left: 0;
-	background-image: url('images/mission_img.jpg');
+	background-image: url('../images/mission_img.jpg');
 }
 .vision_img{
 	right: 0;
-	background-image: url('images/vision_img.jpg');
+	background-image: url('../images/vision_img.jpg');
 }
 /*****************************
     END MISSION-VISIN AREA
@@ -1975,7 +1975,7 @@ GENERAL (General section contains css those are similar among many pages).
     START COUNTERUP
 ******************************/
 .counter_up{
-	background-image: url('images/counter_bg.jpg');
+	background-image: url('../images/counter_bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
@@ -2095,7 +2095,7 @@ GENERAL (General section contains css those are similar among many pages).
   START TEAM AREA
 -----------------------------*/
 .team_area{
-	background-image: url('images/team_bg.jpg');
+	background-image: url('../images/team_bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
@@ -2272,7 +2272,7 @@ GENERAL (General section contains css those are similar among many pages).
 	margin-bottom: 60px;
 }
 .service_page .about_us_area{
-	background-image: url('images/service_aboutbg.jpg');
+	background-image: url('../images/service_aboutbg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
