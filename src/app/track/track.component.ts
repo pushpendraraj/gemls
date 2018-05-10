@@ -10,16 +10,16 @@ import { DataService } from '../data.service';
 export class TrackComponent implements OnInit {
   job_no = '';
   listitems = [];
-itemResource = new DataTableResource(this.listitems);
-    items = [];
-    itemCount = 0;
-    limit  = 5;
-    limits = [10, 20, 40, 80];
+  itemResource = new DataTableResource(this.listitems);
+  items = [];
+  itemCount = 0;
+  limit  = 5;
+  limits = [10, 20, 40, 80];
 
     constructor(private dataService: DataService) {
       this.itemResource.count().then(count => this.itemCount = count);
     }
- 
+
     reloadItems(params) {
         this.itemResource.query(params).then(items => this.items = items);
     }
@@ -40,9 +40,9 @@ itemResource = new DataTableResource(this.listitems);
     applyFilter(filterValue: string) {
       filterValue = filterValue.trim();
       filterValue = filterValue.toLowerCase();
-      let newItem = [];
-      this.listitems.forEach(function(item, index){
-        if(item.job_no.toLowerCase() === filterValue){
+      const newItem = [];
+      this.listitems.forEach(function(item, index) {
+        if (item.job_no.toLowerCase() === filterValue) {
           newItem.push(item);
         }
       });
@@ -56,13 +56,12 @@ itemResource = new DataTableResource(this.listitems);
 
   ngOnInit() {
     this.dataService.getShippings().subscribe(
-      data=>{
+      data => {
         this.listitems = data;
       },
-      err =>{
-        console.log(err)
+      err => {
+        console.log(err);
       }
-    )
+    );
   }
-
 }
