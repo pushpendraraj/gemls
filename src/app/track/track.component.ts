@@ -50,7 +50,7 @@ export class TrackComponent implements OnInit {
       this.items = newItem;
       this.itemCount = 0;
       this.limit  = newItem.length;
-      this.limits = [10, 20, 40, 80];
+      this.limits = [newItem.length];
       this.itemResource.count().then(count => this.itemCount = count);
     }
 

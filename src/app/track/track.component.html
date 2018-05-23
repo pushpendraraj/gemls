@@ -6,7 +6,7 @@
                 <div class="tc_form">
                     <form  #searchForm="ngForm" id="searchForm" method="GET">
                         <div class="tc_input_wrapper">
-                            <input type="text" (keyup)="applyFilter($event.target.value)" id="job_no" placeholder="Enter Your Tracking Code">
+                            <input type="text" autocomplete="off" (keyup)="applyFilter($event.target.value)" id="job_no" placeholder="Enter Your Tracking Code">
                         </div>
                     </form>
                 </div>
